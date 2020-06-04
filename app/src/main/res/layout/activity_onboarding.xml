@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- view_pager -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_navigation"/>
+
+        <!-- bottom_navigation_shadow -->
+        <View
+            android:id="@+id/bottom_navigation_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_above="@+id/bottom_navigation"
+            android:background="@drawable/bottom_navigation_shadow"/>
+
+        <!-- bottom_navigation -->
+        <RelativeLayout
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true">
+
+            <!-- back_button -->
+            <TextView
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:visibility="invisible"
+                android:padding="16dp"
+                android:textSize="16sp" />
+
+            <!-- tab_dots -->
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                android:id="@+id/tab_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:dotsColor="@android:color/darker_gray"
+                app:dotsCornerRadius="8dp"
+                app:dotsSize="8dp"
+                app:dotsSpacing="2dp"
+                app:dotsWidthFactor="2.5"
+                app:selectedDotColor="@color/colorPrimary"
+                app:progressMode="true" />
+
+            <!-- next_button -->
+            <TextView
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"
+                android:text="@string/lets_start"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

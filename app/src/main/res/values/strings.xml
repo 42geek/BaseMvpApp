@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Base Mvp App</string>
+    <string name="title_activity_onboarding">FullscreenActivity</string>
+    <string name="lets_start">Let\'s Start</string>
+    <string name="back">Back</string>
+    <string name="done">Done</string>
+    <string name="next">Next</string>
+    <string name="title_home">Home</string>
+    <string name="title_settings">Settings</string>
+    <string name="fragment_title_home">Home</string>
+    <string name="fragment_title_settings">Settings</string>
+</resources>
